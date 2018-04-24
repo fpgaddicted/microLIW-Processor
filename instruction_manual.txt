@@ -1,0 +1,19 @@
+|opcode|               instruction				  |
+|______|__________________________________________|
+					
+0000			
+0001		add (R[d] <- R[t] + R[s])
+0010		addi (R[d] <- R[t] + imm)
+0011		sub (R[d] <- R[t] - R[s])
+0100		subi (R[d] <- R[t] - imm)
+0101		or (R[d] <- R[t] or R[s])
+0110		ori (R[d] <- R[t] or imm)
+0111		and (R[d] <- R[t] and R[s])
+1000		nor (R[d] <- R[t] nor R[s])
+1001		nand (R[d] <- R[t] nand R[s])
+1010		beqi (if R[t] = imm => pc <- branch target
+1011		bgt (if R[t] > R[s] => pc <- branch target
+1100		blt (if R[t] < R[s] => pc <- branch target
+1101		jmp (pc <- jump target)
+1110		R[d] <= Mem(R[s] + offset)
+1111		Mem(R[s] + offset) <= R[t]
